@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Home from "./compo/Home";
+import BookList from "./compo/BookList";
+import MemberList from "./compo/MemberList";
+import SearchBar from "./compo/SearchBar";
+import books from "./books";
+import BookDetails from "./compo/BookDetails";
+import { useState } from "react";
+import members from "./members";
+import MemberDetails from "./compo/MemberDetails";
+import { Switch, Route } from "react-router";
+import AddBook from "./compo/AddBook";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/addbook">
+          <AddBook />
+        </Route>
+      </Switch>
     </div>
   );
 }
-
 export default App;
