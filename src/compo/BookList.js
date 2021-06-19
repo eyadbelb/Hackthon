@@ -33,10 +33,10 @@ const BookList = (props) => {
     <div>
       <h1> Books List</h1>
       <SearchBar setQuery={setQuery} />
-      <button> ADD NEW BOOK</button>
-
+      <Link to="/addbook">
+        <button> ADD NEW BOOK</button>
+      </Link>
       <list> {arrayOfBooks}</list>
-      <Link to="/addbook"></Link>
     </div>
   );
 };
